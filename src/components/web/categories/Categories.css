@@ -1,0 +1,15 @@
+.swiper-pagination-bullets{
+    text-align: center;
+    padding-top: 50px;
+}
+.swiper-button-prev , .swiper-button-next{
+    background-color:aliceblue;
+    color: #000 !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+.swiper-button-prev:after, .swiper-button-next:after
+,.swiper-rtl .swiper-button-next:after{
+    font-size: 20px !important;
+}

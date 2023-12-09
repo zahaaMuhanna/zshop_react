@@ -1,0 +1,25 @@
+.profile{
+    display: flex;
+    gap: 30px;
+    height: 100;
+}
+.profileLinks nav{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+
+.profileLinks{
+    width: 150px;
+}
+
+.userData{
+    flex-grow: 1;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
