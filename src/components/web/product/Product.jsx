@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom'
-import ReactImageMagnify from 'react-image-magnify';
 import axios from 'axios';
 import { CartContext } from '../context/Cart.jsx';
 
@@ -30,25 +29,10 @@ function Product() {
     <div className="container">
       <div className="row">
           <div className="col-lg-4">
-            {data.subImages.map( (img,index)=>
-            <React.Fragment key={index}>
-              <ReactImageMagnify {...{
-                smallImage: {
-                    alt: 'Wristwatch by Ted Baker London',
-                    isFluidWidth: true,
-                    src: img.secure_url
-                },
-                largeImage: {
-                    src: img.secure_url,
-                    width: 1200,
-                    height: 1800
-                },
-                isHintEnabled:true,
-                shouldUsePositiveSpaceLens:true,
-
-            }} />
-            </React.Fragment>
+          {data.subImages.map( (img,index)=>
+                <img src={data.mainImage.secure_url}></img>
             )}
+          </div>
           </div>
           <div className="col-lg-8">
             <h2>{data.name}</h2>
@@ -56,7 +40,6 @@ function Product() {
             <button className='btn btn-outline-info' onClick={()=>addToCart(data._id)}>Add To Cart</button>
           </div>
       </div>
-    </div>
   )
 }
 
